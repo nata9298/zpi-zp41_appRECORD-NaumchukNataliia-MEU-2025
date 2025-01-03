@@ -1,30 +1,99 @@
-.button_labs {
-    width: 90%;
-    height: 100 hv;
-    left: 20px;
+* {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+body { 
+    margin: 0;
     display: flex;
+    flex-direction: column;
+}
+.header {
+    text-align: center;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+.photo {
+    position: absolute; 
+    top: 10px;       
+    right: 50px;      
+    width: 100px;      
+    height: 100px;
+}
+.main-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    gap: 10px;
     justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    color: black;
-    background-color: aliceblue;
-    border: 1px solid  blue;
-    border-radius: 5px;
-    user-select: none;
-    line-height: xx-small;
-    font-size: 1rem;
-}
+    margin-bottom: 20px;
+  }
 
-.button:hover {
-    opacity: .8;
+  .main-button {
+    padding: 10px 20px;
+    background-color: #dbdbee;
+    color: rgb(0, 0, 0);
+    border: none;
     cursor: pointer;
-}
+    border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+  }
 
-.button:focus {
-    opacity: .8;
-    cursor: none;
-}
+  .main-button:hover {
+    background-color: #999;
+  }
+
+  /* Контейнер для підкнопок і контенту */
+  .content-area {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* Підкнопки */
+  .hidden-buttons-container {
+    position: relative;
+    min-width: 150px;
+  }
+
+  .hidden-buttons {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .hidden-buttons button {
+    padding: 8px 15px;
+    background-color: #ddd;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .hidden-buttons button:hover {
+    background-color: #ccc;
+  }
+
+  /* Місце для тексту та зображення */
+  .text-container {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border: 2px solid #2196f3;
+    border-radius: 5px;
+    display: none;
+  }
+
+  .text-container img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 10px;
+  }
