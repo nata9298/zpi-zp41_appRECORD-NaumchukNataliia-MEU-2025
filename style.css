@@ -29,9 +29,9 @@ body {
     gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
-  }
+}
 
-  .main-button {
+.main-button {
     padding: 10px 20px;
     background-color: #dbdbee;
     color: rgb(0, 0, 0);
@@ -40,60 +40,58 @@ body {
     border-radius: 5px;
     min-width: 150px;
     text-align: center;
-  }
+}
 
-  .main-button:hover {
+.main-button:hover {
     background-color: #999;
-  }
+}
 
-  /* Контейнер для підкнопок і контенту */
-  .content-area {
+/* Контейнер для підкнопок і контенту */
+.content-area {
     display: flex;
     gap: 20px;
     width: 100%;
-  }
+}
 
-  /* Підкнопки */
-  .hidden-buttons-container {
+/* Підкнопки */
+.hidden-buttons-container {
     position: relative;
     min-width: 150px;
-  }
+}
 
-  .hidden-buttons {
+.hidden-buttons {
     display: none;
     flex-direction: column;
     gap: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+}
 
-  .hidden-buttons button {
+.hidden-buttons button {
     padding: 8px 15px;
     background-color: #ddd;
     color: black;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  .hidden-buttons button:hover {
+.hidden-buttons button:hover {
     background-color: #ccc;
-  }
+}
 
-  /* Місце для тексту та зображення */
-  .text-container {
+/* Місце для тексту та зображення */
+.text-container {
     flex-grow: 1;
     padding: 10px;
-    background-color: #e3f2fd;
+    background-color: #2196f3;
+    color: white;
     border: 2px solid #2196f3;
     border-radius: 5px;
     display: none;
-  }
+}
 
-  .text-container img {
+.text-container img {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
     margin-top: 10px;
-  }
+}
