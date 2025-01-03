@@ -12,12 +12,12 @@ body {
 .header {
     text-align: center;
     padding: 5px;
-    background-color: #f0f0f0;
-    border-bottom: 1px solid #ccc;
+    background-color: #cdd8f5;
+    border-bottom: 1px solid #d0def8;
 }
 .photo {
     position: absolute; 
-    top: 10px;       
+    top: 3px;       
     right: 50px;      
     width: 100px;      
     height: 100px;
@@ -33,7 +33,7 @@ body {
 
 .main-button {
     padding: 10px 20px;
-    background-color: #dbdbee;
+    background-color: #cdd8f5;
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
@@ -43,7 +43,7 @@ body {
 }
 
 .main-button:hover {
-    background-color: #999;
+    background-color: #6c7ea5;
 }
 
 /* Контейнер для підкнопок і контенту */
@@ -67,24 +67,24 @@ body {
 
 .hidden-buttons button {
     padding: 8px 15px;
-    background-color: #ddd;
+    background-color: #cdd8f5;
     color: black;
-    border: 1px solid #ccc;
+    border: 1px solid #d0def8;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .hidden-buttons button:hover {
-    background-color: #ccc;
+    background-color: #6c7ea5;
 }
 
 /* Місце для тексту та зображення */
 .text-container {
     flex-grow: 1;
     padding: 10px;
-    background-color: #2196f3;
-    color: white;
-    border: 2px solid #2196f3;
+    background-color:#e4e9f7;
+    color: rgb(0, 0, 0);
+    border: 2px solid #d0def8;
     border-radius: 5px;
     display: none;
 }
