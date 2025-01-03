@@ -1,0 +1,30 @@
+.button_labs {
+    width: 90%;
+    height: 100 hv;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    background-color: aliceblue;
+    border: 1px solid  blue;
+    border-radius: 5px;
+    user-select: none;
+    line-height: xx-small;
+    font-size: 1rem;
+}
+
+.button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.button:focus {
+    opacity: .8;
+    cursor: none;
+}
