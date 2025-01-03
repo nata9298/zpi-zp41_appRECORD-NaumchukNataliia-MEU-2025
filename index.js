@@ -1,8 +1,5 @@
-
-
 // Функція для створення основних кнопок і підкнопок
 function createButtons() {
-
     var buttonsData;
     fetch('content.json')
         .then(response => response.json()) // перетворює відповідь в JSON
@@ -25,15 +22,14 @@ function createButtons() {
                     subButton.textContent = subButtonData.label;
 
                     var textContent = "";
-                    if("text" in subButtonData) {
+                    if ("text" in subButtonData) {
                         textContent = subButtonData.text;
-                    } else if("textfile" in subButtonData) {
+                    } else if ("textfile" in subButtonData) {
                         fetch(subButtonData.textfile)
-                            .then(response => response.text()) // перетворює відповідь в JSON
+                            .then(response => response.text()) // перетворює відповідь у текст
                             .then(text => {
                                 textContent = text;
-                            }
-                        );
+                            });
                     }
                     subButton.addEventListener('click', () => showContent(textContent, subButtonData.image));
                     subButtonsDiv.appendChild(subButton);
@@ -54,7 +50,13 @@ function createButtons() {
 function toggleButtons(index) {
     const subButtonsDiv = document.getElementById(`subButtons${index}`);
     const allSubButtons = document.querySelectorAll('.hidden-buttons');
+    const displayText = document.getElementById('displayText'); // Отримуємо текстовий блок
+
+    // Ховаємо всі підкнопки та текст
     allSubButtons.forEach(div => div.style.display = 'none');
+    displayText.style.display = 'none'; // Приховуємо текст при натисканні іншої основної кнопки
+
+    // Перемикаємо видимість вибраного блоку
     subButtonsDiv.style.display = subButtonsDiv.style.display === 'none' || !subButtonsDiv.style.display ? 'flex' : 'none';
 }
 
@@ -65,8 +67,14 @@ function showContent(text, imageSrc) {
     const imageContent = document.getElementById('imageContent');
 
     textContent.innerHTML = text; // Вставляємо HTML текст
-    imageContent.src = imageSrc;
-    imageContent.style.display = 'block';
+
+    if (imageSrc) { // Перевіряємо, чи зображення задано
+        imageContent.src = imageSrc;
+        imageContent.style.display = 'block';
+    } else {
+        imageContent.style.display = 'none'; // Ховаємо зображення, якщо його немає
+    }
+
     displayText.style.display = 'block';
 }
 

@@ -43,7 +43,7 @@ body {
 }
 
 .main-button:hover {
-    background-color: #6c7ea5;
+    background-color: #9eafd3;
 }
 
 /* Контейнер для підкнопок і контенту */
@@ -75,7 +75,7 @@ body {
 }
 
 .hidden-buttons button:hover {
-    background-color: #6c7ea5;
+    background-color: #9eafd3;
 }
 
 /* Місце для тексту та зображення */
