@@ -12,13 +12,11 @@
             },
             {
                 "label": "Структура документа",
-                "text": "Текст для кнопки 1-3",
-                "image": "image3.jpg"
+                "textfile":"textfiles/file_structure.html"
             },
             {
                 "label": "HTML-код таблиць",
-                "text": "Текст для кнопки 1-3",
-                "image": "image3.jpg"
+                "text": "Текст для кнопки 1-3"
             },
             {
                 "label": "HTML-код форми",

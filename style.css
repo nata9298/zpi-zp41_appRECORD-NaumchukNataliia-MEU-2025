@@ -90,7 +90,7 @@ body {
 }
 
 .text-container img {
-    width: 100%;
+    width: auto;
     max-height: 300px;
     object-fit: cover;
     margin-top: 10px;
