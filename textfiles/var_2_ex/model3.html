@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №3 Варіант 7</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    header {
+        background-color: rgb(255, 255, 255);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .city-dropdown {
+        position: relative;
+        display: inline-block;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .city-dropdown:hover {
+        background-color: #444;
+    }
+
+    .city-dropdown .arrow {
+        margin-left: 10px;
+        font-size: 0.8rem;
+        color: #00bfff;
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: black;
+
+    }
+
+    header nav a:hover {
+        background-color: rgb(255, 221, 0);
+        color: black;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .hero-left {
+        flex: 1;
+    }
+
+    .hero-left h1 {
+        font-size: 4rem;
+        color: orange;
+        position: relative;
+    }
+
+    .hero-left h1 span {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        color: #ff6600;
+        font-size: 5rem;
+        z-index: -1;
+    }
+
+    .hero-left p {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #555;
+    }
+
+    .hero-right {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-right .text-content {
+        flex: 1;
+    }
+
+    .hero-right h2 {
+        font-size: 2rem;
+        color: #ff9500;
+        margin-bottom: 20px;
+    }
+    .hero-right ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .hero-right ul li {
+        font-size: 1rem;
+        margin: 5px 0;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .hero-right ul li::before {
+        content: '\2713';
+        position: absolute;
+        left: 0;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .hero-right .image-content {
+        flex: 1; /* Забезпечує зайняття доступного простору */
+        display: flex; /* Використовує flexbox для вирівнювання */
+        justify-content: flex-end;
+    }
+
+    .hero-right img {
+        max-width: 300px;
+        height: auto;
+        margin: 0; /* Видаляє будь-які зовнішні відступи */
+    }
+
+    .hero-right button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: rgb(255, 221, 0);
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        align-self: flex-end;
+    }
+
+    .hero-right button:hover {
+        background-color: #ffd700;
+    }
+
+    .pricing {
+        background-color: #3493ff;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .pricing .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .pricing .card {
+        background-color: white;
+        color: #333;
+        flex: 1 1 calc(33.333% - 20px);
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        justify-content: flex-start;
+        height: 100%;
+        min-height: 450px;
+    }
+
+    .pricing .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+    }
+
+    .pricing .card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        flex-grow: 1; /* Дозволяє списку займати доступний простір */
+    }
+
+    .pricing .card ul li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .pricing .card ul li::before {
+        content: '\2713';
+        color: green;
+        margin-right: 8px;
+    }
+
+    .pricing .card ul li.gray {
+        color: rgb(165, 165, 165);
+    }
+
+    .pricing .card ul li.gray::before {
+        content: '\25CF';
+        color: gray;
+        margin-right: 8px;
+    }
+
+    .pricing .card .separator {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-top: auto;  
+    }
+
+    .pricing .card .price {
+        text-align: center;
+        font-weight: bold;
+        color: #268fff;
+        margin-top: auto;
+        margin-bottom: 10px;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .pricing .card .price del {
+        color: #268fff;
+        font-size: 1,5rem;
+        text-decoration-color: red;
+        display: block;
+    }
+
+    .pricing .card .price span {
+        font-size: 1.5rem;
+        color: #268fff;
+        width: 100%;
+    }
+
+    .pricing .card .spots {
+        color: #268fff;
+        font-weight: bold;
+        display: block;
+    }
+
+    .pricing .card button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: rgb(255, 221, 0);
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 80%; 
+    }
+
+    .cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #3493ff;
+    color: white;
+    max-width: 100%; 
+    margin-TOP: 20px;
+    border-radius: 0; 
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .cta h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .cta p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .cta-content {
+        max-width: 60%; 
+    }
+
+    .cta button {
+        padding: 15px 30px;
+        background-color: #FFD600;
+        color: #000;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        white-space: nowrap; 
+    }
+
+    .cta button:hover {
+        background-color: #ffea00;
+    }
+
+    .qa-course {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px 20px;
+        max-width: 100%; 
+        margin: auto;
+        background-color: #F9F9F9;
+    }
+
+    .qa-course .qa-info {
+        flex: 1;
+        padding-right: 20px;
+    }
+
+    .qa-course .qa-info h3 {
+        font-size: 2.5rem;
+        color: #FF5C00;
+        font-weight: bold;
+    }
+
+    .qa-course .qa-info p {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .qa-course .qa-info button {
+        margin-top: 25px;
+        padding: 15px 30px;
+        background-color: #439afc;
+        color: rgb(0, 0, 0);
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    .qa-course .qa-info button:hover {
+        background-color: #0056C7;
+    }
+
+    .qa-course .qa-image {
+        flex: 1;
+        text-align: right;
+    }
+
+    .qa-course .qa-image img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <a href="#">Форми навчання</a>
+            <a href="#">Заходи</a>
+            <a href="#">Про Академію</a>
+            <a href="#">Контакти</a>
+            <div class="city-dropdown">
+                Київ <span class="arrow">▼</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-left">
+            <p><img src="img/40hours.png" alt="40hours"></p>
+            <h3>Опануй React за 20<br>занять</h3>
+        </div>
+        <div class="hero-right">
+            <div class="text-content">
+                <h2>Програма курсу <span style="color: black;"><br>REACT</span></h2>
+                <ul>
+                    <li>Встановлення React</li>
+                    <li>Класові компоненти</li>
+                    <li>State & Props</li>
+                    <li>Data Forwarding & Props Drilling</li>
+                    <li>Lifecycle Hooks</li>
+                    <li>Функціональні компоненти</li>
+                    <li>Routing</li>
+                    <li>Hooks</li>
+                    <li>Redux</li>
+                </ul>
+                <button>Записатись на курс</button>
+            </div>
+            <div class="image-content">
+                <img src="img/img_r.png" alt="React Graphic">
+            </div>
+        </div>
+    </div>
+
+    <section class="pricing">
+        <div class="container">
+            <!-- Minimal Plan -->
+            <div class="card">
+                <h3>MINIMAL</h3>
+                <ul>
+                    <li>40 годин</li>
+                    <li>2 місяці</li>
+                    <li>12 годин в тиждень</li>
+                    <li>Розтермінування до 24 міс.</li>
+                    <li class="gray">Безкоштовне повторне проходження курсу</li>
+                    <li class="gray">Особистий ментор</li>
+                </ul>
+                <p class="price"><del>17 000 грн</del> 8 500 грн</p>
+                <div class="separator"></div>
+                <p class="spots">3 вільних місця</p>
+                <button>Записатися на курс</button>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="card">
+                <h3>PRO</h3>
+                <ul>
+                    <li>40 годин</li>
+                    <li>2 місяці</li>
+                    <li>12 годин в тиждень</li>
+                    <li>Розтермінування до 24 міс.</li>
+                    <li>Безкоштовне повторне проходження курсу</li>
+                    <li>Особистий ментор</li>
+                </ul>
+                <p class="price"><del>25 000 грн</del> 12 500 грн</p>
+                <div class="separator"></div>
+                <p class="spots">3 вільних місця</p>
+                <button>Записатися на курс</button>
+            </div>
+
+            <!-- Individual Plan -->
+            <div class="card">
+                <h3>ІНДИВІДУАЛЬНО</h3>
+                <p>Об'єм, навантаження, тривалість визначаються індивідуально для кожного студента його персональним ментором.</p>
+                <p class="price"><del>100 000 грн</del> 51 000 грн</p>
+                <div class="separator"></div>
+                <p class="spots">1 вільне місце</p>
+                <button>Записатися на курс</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h3>Навчайся зараз</h3>
+        <h2>Cплачуй потім</h2>
+        <p>Розтермінування платежів до 24 місяців.</p>
+        <button>Дізнатись деталі</button>
+    </section>
+
+    <section class="qa-course">
+        <div class="qa-info">
+            <h3>Комплексний курс тестування QA</h3>
+            <h2>Такого крутого курсу тестування ще не було!</h2> 
+            <p>Найбільший та найкращий курс тестування в Україні. Гарантія працевлаштування. Найновіші набори технологій.</p>
+            <button>Забронювати місце</button>
+        </div>
+        <div class="qa-image">
+            <img src="img/photo_dev.png" alt="React dev">
+        </div>
+    </section>
+</body>
+</html>

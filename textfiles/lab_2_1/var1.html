@@ -1,0 +1,163 @@
+<h2>Обґрунтування вибору адаптивного макету</h2>
+
+<h3>1. Чому адаптивний макет?</h3>
+<p>Адаптивний макет (responsive layout) дозволяє вебсайту коректно відображатися на різних пристроях: від мобільних телефонів до великих екранів моніторів. Це досягається завдяки використанню гнучких сіток, медіазапитів у CSS та адаптивних зображень.</p>
+
+<h3>2. Приклади реалізації:</h3>
+<ul>
+    <li><strong>Viewport:</strong> Мета-тег <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> дозволяє браузеру автоматично масштабувати сторінку.</li>
+    <li><strong>Гнучкі розміри:</strong> Використання відсотків або одиниць <code>vw</code>, <code>vh</code> для ширини та висоти.</li>
+    <li><strong>Медіазапити:</strong> CSS-медіазапити, які дозволяють застосовувати різні стилі залежно від ширини екрану.</li>
+</ul>
+
+<h3>3. Переваги адаптивного макету:</h3>
+<ul>
+    <li>Забезпечує зручність користувачам незалежно від їхнього пристрою.</li>
+    <li>Сприяє SEO-оптимізації, оскільки пошукові системи віддають перевагу мобільним сайтам.</li>
+    <li>Економія часу та ресурсів на розробку окремих версій для мобільних і десктопних пристроїв.</li>
+</ul>
+<h2>Базова концепція використаного коду</h2>
+        <p>При верстці сторінок засобами CSS у наведеному коді використовується наступна базова концепція:</p>
+        
+        <h3>1. Семантична структура HTML</h3>
+        <p>
+            Код використовує семантичні теги, такі як <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, щоб забезпечити логічну та зрозумілу структуру сторінки.
+            Це сприяє зручності підтримки коду, покращує SEO та забезпечує доступність для людей з обмеженими можливостями.
+        </p>
+        
+        <h3>2. Принцип Mobile-First</h3>
+        <p>
+            Код створено з урахуванням мобільних пристроїв: стилі базуються на простішому вигляді для малих екранів, а для більших екранів використовуються медіазапити.
+            Це забезпечує адаптивний дизайн і зручність користування на різних пристроях.
+            <p><img src="img_record/mob_site.png" alt="site"></p>
+            <p><img src="img_record/pl_site.png" alt="site"></p>
+            <pre><code>
+                /* Media Queries */
+
+                /* Планшети (ширина до 1024px) */
+                @media screen and (max-width: 1024px) {
+                    .hero {
+                        height: 400px;
+                        padding: 20px;
+                    }
+                    .hero h1 {
+                        font-size: 2.5rem;
+                    }
+                    .hero p {
+                        font-size: 1rem;
+                    }
+                    nav {
+                        margin-bottom: 50px;
+                    }
+                    .section {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                    .section img {
+                        max-width: 300px;
+                        margin-bottom: 20px;
+                    }
+                    .section-content {
+                        border-left: none;
+                        border-top: 2px solid #f3a25e;
+                        padding: 20px;
+                    }
+                    .teacher-list {
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    }
+                    .teacher {
+                        width: 45%;
+                    }
+                    nav {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+                    nav a {
+                        padding: 10px;
+                    }
+                }
+                
+                /* Мобільні пристрої (ширина до 768px) */
+                @media screen and (max-width: 768px) {
+                    header {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 15px;
+                    }
+                    nav {
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 10px 0;
+                    }
+                    nav a {
+                        padding: 8px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .hero {
+                        height: auto;
+                        padding: 40px 20px;
+                    }
+                    .hero h1 {
+                        font-size: 2rem;
+                    }
+                    .hero p {
+                        font-size: 1rem;
+                    }
+                    .hero img {
+                        width: 100%;
+                        max-width: 280px;
+                    }
+                    .section {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .section img {
+                        max-width: 250px;
+                    }
+                    .teacher-list {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .teacher {
+                        width: 90%;
+                    }
+                    .login-section, .test-section, .section-content {
+                        width: 90%;
+                    }
+                    .cta-button, button, input, select, textarea {
+                        width: 100%;
+                    }
+                    footer {
+                        flex-direction: column;
+                        text-align: center;
+                        padding: 20px;
+                    }
+                }    
+            </code></pre>
+                
+        </p>
+        
+        <h3>3. Використання модульності</h3>
+        <p>
+            Кожен блок сторінки, такий як "Головна секція", "Формат навчання", "Викладачі", поділений на окремі <code>&lt;section&gt;</code>.
+            Це дозволяє легко додавати або змінювати окремі елементи без впливу на інші частини сторінки.
+        </p>
+        
+        <h3>4. Гнучкий дизайн</h3>
+        <p>
+            Код містить інтерактивні елементи, наприклад, форми, таблиці, кнопки, що забезпечують зручну взаємодію з користувачем. 
+            Також використовується CSS для естетичного вигляду та чіткого відображення даних.
+        </p>
+        
+        <h3>5. Використання зображень</h3>
+        <p>
+            Для підвищення візуальної привабливості використовуються зображення (<code>&lt;img&gt;</code>) та іконки. Це робить інтерфейс більш зрозумілим і привабливим для користувача.
+        </p>
+
+        <h3>6. Покращення доступності</h3>
+        <p>
+            У формі додані необхідні атрибути, наприклад, <code>required</code>, щоб уникнути помилок при введенні даних.
+        </p>

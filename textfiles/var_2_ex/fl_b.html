@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Block Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Забезпечує правильний розрахунок відступів */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Висота сторінки 100% екрану */
+            margin: 0;
+        }
+
+        .header, .footer {
+            flex: 0 0 10%; /* Гнучка висота заголовка і футера */
+            display: flex;
+            justify-content: center; /* Горизонтальне центрування тексту */
+            align-items: center; /* Вертикальне центрування тексту */
+            text-align: center;
+            font-size: 2vw; /* Адаптивний розмір шрифту */
+            font-weight: bold;
+            color: white; /* Білий текст */
+            background-color: blue; /* Синій фон */
+        }
+
+        .main {
+            flex: 1; /* Гнучка висота основної частини */
+            display: flex;
+            flex-wrap: nowrap; /* Заборона переносу блоків */
+        }
+
+        .side {
+            flex: 1; /* Ширина бокової панелі змінюється з розміром вікна */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Центрування тексту */
+            background-color: gold; /* Жовтий фон */
+            font-size: 2vw; /* Адаптивний розмір шрифту */
+            font-weight: bold;
+        }
+
+        .content {
+            flex: 4; /* Гнучка ширина контенту */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-block {
+            flex: 4; /* Гнучка висота основного блоку */
+            background-color: white; /* Білий фон */
+            border: 1px solid black; /* Чорна рамка */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Центрування тексту */
+            font-size: 2vw; /* Адаптивний розмір шрифту */
+            font-weight: bold;
+        }
+
+        .small {
+            flex: 1; /* Гнучка висота менших блоків */
+            border: 1px solid black; /* Чорна рамка */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Центрування тексту */
+            font-size: 2vw; /* Адаптивний розмір шрифту */
+            font-weight: bold;
+            background-color: gold; /* Жовтий фон */
+        }
+    </style>
+</head>
+<body>
+    <!-- Заголовок сторінки -->
+    <div class="header">1</div>
+
+    <!-- Основний вміст сторінки -->
+    <div class="main">
+        <!-- Бокова панель з цифрою 2 -->
+        <div class="side">2</div>
+
+        <!-- Основна частина контенту -->
+        <div class="content">
+            <!-- Верхній блок з цифрою 5 -->
+            <div class="small">5</div>
+            <!-- Основний білий блок з цифрою 4 -->
+            <div class="main-block">4</div>
+        </div>
+    </div>
+
+    <!-- Футер сторінки -->
+    <div class="footer">3</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<h3>Мобільна версія</h3>
+<p><strong>Основні характеристики:</strong></p>
+<ul>
+  <li>Маленький екран (до 768px).</li>
+  <li>Лінійне розташування контенту (одна колонка).</li>
+  <li>Спрощена навігація, кнопки великі для сенсорного керування.</li>
+  <li>Менше графіки, адаптовані шрифти для зручності читання.</li>
+</ul>
+
+  <li>Використання <code>медіа-запитів</code>:</li>
+</ul>
+<p><img src="img_record/site_adap_m.png" alt="ad_m"></p>
+<pre><code>
+  /* Мобільні пристрої (ширина до 768px) */
+  @media screen and (max-width: 768px) {
+      header {
+          flex-direction: column;
+          text-align: center;
+          padding: 15px;
+      }
+      nav {
+          flex-direction: column;
+          align-items: center;
+          padding: 10px 0;
+      }
+      nav a {
+          padding: 8px;
+          width: 100%;
+          text-align: center;
+      }
+      .hero {
+          height: auto;
+          padding: 40px 20px;
+      }
+      .hero h1 {
+          font-size: 2rem;
+      }
+      .hero p {
+          font-size: 1rem;
+      }
+      .hero img {
+          width: 100%;
+          max-width: 280px;
+      }
+      .section {
+          flex-direction: column;
+          text-align: center;
+      }
+      .section img {
+          max-width: 250px;
+      }
+      .teacher-list {
+          flex-direction: column;
+          align-items: center;
+      }
+      .teacher {
+          width: 90%;
+      }
+      .login-section, .test-section, .section-content {
+          width: 90%;
+      }
+      .cta-button, button, input, select, textarea {
+          width: 100%;
+      }
+      footer {
+          flex-direction: column;
+          text-align: center;
+          padding: 20px;
+      }
+  }
+</code></pre>

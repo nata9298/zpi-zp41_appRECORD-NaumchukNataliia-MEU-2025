@@ -1,0 +1,59 @@
+<h3>Планшетна версія</h3>
+<p><strong>Основні характеристики:</strong></p>
+<ul>
+  <li>Екрани середнього розміру (від 768px до 1024px).</li>
+  <li>Менше колонок (зазвичай 1-2).</li>
+  <li>Меню може бути приховане у випадаючий список (гамбургер-меню).</li>
+  <li>Кнопки та елементи більші для сенсорного керування.</li>
+</ul>
+
+<ul>
+  <li>Використання <code>медіа-запитів</code> для адаптації макета:</li>
+</ul>
+<p><img src="img_record/site_adap_t.png" alt="ad_t"></p>
+<pre><code>
+  /* Планшети (ширина до 1024px) */
+  @media screen and (max-width: 1024px) {
+      .hero {
+          height: 400px;
+          padding: 20px;
+      }
+      .hero h1 {
+          font-size: 2.5rem;
+      }
+      .hero p {
+          font-size: 1rem;
+      }
+      nav {
+          margin-bottom: 50px;
+      }
+      .section {
+          flex-direction: column;
+          text-align: center;
+          padding: 20px;
+      }
+      .section img {
+          max-width: 300px;
+          margin-bottom: 20px;
+      }
+      .section-content {
+          border-left: none;
+          border-top: 2px solid #f3a25e;
+          padding: 20px;
+      }
+      .teacher-list {
+          flex-wrap: wrap;
+          gap: 20px;
+      }
+      .teacher {
+          width: 45%;
+      }
+      nav {
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      nav a {
+          padding: 10px;
+      }
+  }
+</code></pre>

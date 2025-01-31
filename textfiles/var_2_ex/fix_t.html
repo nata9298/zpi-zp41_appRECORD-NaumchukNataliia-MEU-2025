@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Table Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 800px; /* Жорстка фіксована ширина таблиці */
+            height: 600px; /* Жорстка фіксована висота таблиці */
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: blue;
+            color: white;
+            height: 60px; /* Фіксована висота заголовка */
+        }
+
+        .footer {
+            background-color: blue;
+            color: white;
+            height: 60px; /* Фіксована висота футера */
+        }
+
+        .side {
+            background-color: gold;
+            width: 160px; /* Фіксована ширина бокових панелей */
+        }
+
+        .content {
+            background-color: white;
+            width: 480px; /* Фіксована ширина основного контенту */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col style="width: 160px;"> <!-- Фіксована ширина бокової панелі -->
+            <col style="width: 480px;"> <!-- Фіксована ширина контенту -->
+            <col style="width: 160px;"> <!-- Фіксована ширина бокової панелі -->
+        </colgroup>
+        <tr>
+            <td colspan="3" class="header">1</td>
+        </tr>
+        <tr>
+            <td class="side">2</td>
+            <td class="content">4</td>
+            <td class="side">5</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="footer">3</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -4,34 +4,31 @@
         "subButtons": [
             {
                 "label": "Опис предметного середовища",
-                "textfile":"textfiles/file_1_1.html"
+                "textfile":"textfiles/lab_1_1/file_1_1.html"
             },
             {
                 "label": "Тема.Мета. Місце розташування лабораторної №1",
-                "textfile":"textfiles/file_topic_1_1.html"
+                "textfile":"textfiles/lab_1_1/file_topic_1_1.html"
             },
             {
                 "label": "Структура документа",
-                "textfile":"textfiles/file_structure.html"
+                "textfile":"textfiles/lab_1_1/file_structure.html"
             },
             {
                 "label": "HTML-код таблиць",
-                "text": "Текст для кнопки 1-3"
+                "textfile": "textfiles/lab_1_1/table.html"
             },
             {
                 "label": "HTML-код форми",
-                "text": "Текст для кнопки 1-3",
-                "image": "image3.jpg"
+                "textfile": "textfiles/lab_1_1/form.html"
             },
             {
                 "label": "HTML-код зображення",
-                "text": "Текст для кнопки 1-3",
-                "image": "image3.jpg"
+                "textfile": "textfiles/lab_1_1/image.html"
             },
             {
                 "label": "Висновки",
-                "text": "Текст для кнопки 1-3",
-                "image": "image3.jpg"
+                "textfile": "textfiles/lab_1_1/end_1.html"
             }
         ]
     },
@@ -40,63 +37,47 @@
         "subButtons": [
             {
                 "label": "Тема. Мета. Місце розташування сайту, звіту",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
+                "textfile": "textfiles/lab_1_2/lab_1-2.html"
             },
             {
                 "label": "Способи підключення стилів з прикладами",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/style_t.html"
             },
             {
                 "label": "Селектори",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
+                "textfile": "textfiles/lab_1_2/selector_d.html"
             },
             {
                 "label": "Селектор тегу",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/sel_t.html"
             },
             {
                 "label": "Селектор класу",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/sel_c.html"
             },
             {
                 "label": "Селектор ідентифікатор",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/sel_i.html"
             },
             {
                 "label": "Інші селектори",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
-            },
-            {
-                "label": "Самостійна робота №2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/sel_others.html"
             },
             {
                 "label": "Шрифт. Google Fonts",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/googlefont.html"
             },
             {
                 "label": "CSS: таблиці, фон, списки",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/tablecss.html"
             },
             {
                 "label": "CSS: просунутий",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/csspros.html"
             },
             {
                 "label": "Висновки",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "textfile": "textfiles/lab_1_2/conc_1_2.html"
             }
 
         ]
@@ -106,63 +87,51 @@
         "subButtons": [
             {
                 "label": "Тема. Мета. Місце розташування сайту, звіту",
-                "text": "Текст для кнопки 3-1",
-                "image": "image7.jpg"
+                "textfile": "textfiles/lab_2_1/goal.html"
             },
             {
                 "label": "Завдання №1. Зовнішній вигляд макету. Код макету",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/var1.html"
             },
             {
                 "label": "Завдання №2",
-                "text": "Текст для кнопки 3-3",
-                "image": "image9.jpg"
+                "textfile": "textfiles/lab_2_1/ex_2.html"
             },
             {
                 "label": "Фіксована таблична верстка",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/fixed_t.html"
             },
             {
                 "label": "Гумова таблична верстка",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/fluid_t.html"
             },
             {
                 "label": "Фіксована блокова верстка",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/fixed_b.html"
             },
             {
                 "label": "Гумова блокова верстка",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/fluid_b.html"
             },
             {
                 "label": "Завдання №3 FLEXBOX",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/ex_3.html"
             },
             {
                 "label": "Скріншот сторінки(Flexbox)",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/screen_site.html"
             },
             {
                 "label": "HTML-код (Flexbox)",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/site_code_h.html"
             },
             {
                 "label": "CSS-код (Flexbox)",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/site_code_s.html"
             },
             {
                 "label": "Висновки",
-                "text": "Текст для кнопки 3-2",
-                "image": "image8.jpg"
+                "textfile": "textfiles/lab_2_1/conc21.html"
             }
         ]
     },
@@ -170,99 +139,24 @@
         "title": "Лабораторна робота №2.2",
         "subButtons": [
             {
-                "label": "Кнопка 2-1",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
+                "label": "Тема. Мета. Місце розташування сайту, звіту",
+                "textfile": "textfiles/lab_2_2/lab22.html"
             },
             {
-                "label": "Кнопка 2-2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "label": "Адаптивна верстка для десктопноїверсії",
+                "textfile": "textfiles/lab_2_2/adap_comp.html"
             },
             {
-                "label": "Кнопка 2-3",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Лабораторна робота №3.1",
-        "subButtons": [
-            {
-                "label": "Кнопка 2-1",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
+                "label": "Адаптивна верстка для планшетної версії",
+                "textfile": "textfiles/lab_2_2/adap_tab.html"
             },
             {
-                "label": "Кнопка 2-2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
+                "label": "Адаптивна верстка для мобільної версії",
+                "textfile": "textfiles/lab_2_2/adap_mob.html"
             },
             {
-                "label": "Кнопка 2-3",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Лабораторна робота №3.2",
-        "subButtons": [
-            {
-                "label": "Кнопка 2-1",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
-            },
-            {
-                "label": "Кнопка 2-2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
-            },
-            {
-                "label": "Кнопка 2-3",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Лабораторна робота №4.1",
-        "subButtons": [
-            {
-                "label": "Кнопка 2-1",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
-            },
-            {
-                "label": "Кнопка 2-2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
-            },
-            {
-                "label": "Кнопка 2-3",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
-            }
-        ]
-    },
-    {
-        "title": "Лабораторна робота №4.2",
-        "subButtons": [
-            {
-                "label": "Кнопка 2-1",
-                "text": "Текст для кнопки 2-1",
-                "image": "image4.jpg"
-            },
-            {
-                "label": "Кнопка 2-2",
-                "text": "Текст для кнопки 2-2",
-                "image": "image5.jpg"
-            },
-            {
-                "label": "Кнопка 2-3",
-                "text": "Текст для кнопки 2-3",
-                "image": "image6.jpg"
+                "label": "Висновки",
+                "textfile": "textfiles/lab_2_2/conc22.html"
             }
         ]
     }

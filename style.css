@@ -91,7 +91,19 @@ body {
 
 .text-container img {
     width: auto;
-    max-height: 300px;
+    max-height: 500px;
     object-fit: cover;
     margin-top: 10px;
+}
+pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
 }
